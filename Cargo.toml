@@ -1,6 +1,6 @@
 [package]
 name = "metaheuristics"
-version = "0.0.1"
+version = "0.0.2"
 authors = ["Alfie John <alfie@alfie.wtf>"]
 description = "Metaheuristics algorithms for finding approximate solutions to optimisation problems"
 
@@ -8,3 +8,7 @@ homepage = "https://crates.io/crates/metaheuristics"
 repository = "https://github.com/alfiedotwtf/metaheuristics"
 
 license = "GPL-3.0"
+
+[dependencies]
+rand = "*"
+time = "*"
