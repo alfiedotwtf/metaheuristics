@@ -1,14 +1,14 @@
 [package]
-name = "metaheuristics"
-version = "0.0.2"
+name    = "metaheuristics"
+version = "0.0.3"
 authors = ["Alfie John <alfie@alfie.wtf>"]
-description = "Metaheuristics algorithms for finding approximate solutions to optimisation problems"
 
-homepage = "https://crates.io/crates/metaheuristics"
-repository = "https://github.com/alfiedotwtf/metaheuristics"
+description = "Metaheuristics algorithms for finding approximate solutions to optimisation problems"
+homepage    = "https://crates.io/crates/metaheuristics"
+repository  = "https://github.com/alfiedotwtf/metaheuristics"
 
 license = "GPL-3.0"
 
 [dependencies]
-rand = "*"
-time = "*"
+rand = "0.3.10"
+time = "0.1.30"
