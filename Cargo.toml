@@ -1,9 +1,9 @@
 [package]
 name    = "metaheuristics"
-version = "0.0.4"
+version = "0.0.5"
 authors = ["Alfie John <alfie@alfie.wtf>"]
 
-description = "Metaheuristics algorithms for finding approximate solutions to optimisation problems"
+description = "Find approximate solutions to your optimisation problem using metaheuristics algorithms"
 homepage    = "https://crates.io/crates/metaheuristics"
 repository  = "https://github.com/alfiedotwtf/metaheuristics"
 
