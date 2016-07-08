@@ -1,11 +1,12 @@
 [package]
 name    = "metaheuristics"
-version = "0.0.5"
+version = "0.0.6"
 authors = ["Alfie John <alfie@alfie.wtf>"]
 
-description = "Find approximate solutions to your optimisation problem using metaheuristics algorithms"
-homepage    = "https://crates.io/crates/metaheuristics"
-repository  = "https://github.com/alfiedotwtf/metaheuristics"
+description   = "Find approximate solutions to your optimisation problem using metaheuristics algorithms"
+homepage      = "https://crates.io/crates/metaheuristics"
+repository    = "https://github.com/alfiedotwtf/metaheuristics"
+documentation = "https://www.alfie.wtf/rustdoc/metaheuristics/metaheuristics/"
 
 license = "GPL-3.0"
 
