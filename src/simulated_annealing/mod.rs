@@ -35,8 +35,8 @@
 //!EOF
 //!```
 //!
-//! For more info on Simulated Annealing, please see [Simulated
-//! Annealing](https://wikipedia.org/wiki/Simulated_annealing).
+//! For more info on Simulated Annealing, please see the [Simulated
+//! Annealing](https://wikipedia.org/wiki/Simulated_annealing) Wikipedia article.
 //!
 //!# Examples
 //!
@@ -50,14 +50,17 @@ use time::{Duration, PreciseTime};
 
 /// Returns an approximate solution to your optimisation problem using Simulated Annealing
 ///
-///```
-///let solution = metaheuristics::simulated_annealing::solve(&mut problem, runtime);
-///```
+///# Parameters
 ///
 /// `problem` is the type that implements the `Metaheuristics` trait.
 ///
 /// `runtime` is a `time::Duration` specifying how long to spend searching for a solution.
-
+///
+///# Examples
+///
+///```
+///let solution = metaheuristics::simulated_annealing::solve(&mut problem, runtime);
+///```
 pub fn solve<T>(problem: &mut Metaheuristics<T>, runtime: Duration) -> T {
     let mut best_candidate      = problem.generate_candidate();
     let mut annealing_candidate = problem.tweak_candidate(&best_candidate);

@@ -16,13 +16,17 @@ use time::{Duration, PreciseTime};
 
 /// Returns an approximate solution to your optimisation problem using Random Search
 ///
-///```
-///let solution = metaheuristics::random_search::solve(&mut problem, runtime);
-///```
+///# Parameters
 ///
 /// `problem` is the type that implements the `Metaheuristics` trait.
 ///
 /// `runtime` is a `time::Duration` specifying how long to spend searching for a solution.
+///
+///# Examples
+///
+///```
+///let solution = metaheuristics::random_search::solve(&mut problem, runtime);
+///```
 pub fn solve<T>(problem: &mut Metaheuristics<T>, runtime: Duration) -> T {
     let mut best_candidate = problem.generate_candidate();
     let start_time         = PreciseTime::now();

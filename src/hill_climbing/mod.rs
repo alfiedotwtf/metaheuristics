@@ -9,8 +9,8 @@
 //! **Note: As Hill Climbing restricts our movement to only ever going up, we guarantee that we
 //! will sometimes get stuck at a local maximum.**
 //!
-//! For more info on Hill Climbing, please see [Hill
-//! Climbing](https://wikipedia.org/wiki/Hill_climbing).
+//! For more info on Hill Climbing, please see the [Hill
+//! Climbing](https://wikipedia.org/wiki/Hill_climbing) Wikipedia article.
 //!
 //!# Examples
 //!
@@ -25,13 +25,17 @@ use time::{Duration, PreciseTime};
 
 /// Returns an approximate solution to your optimisation problem using Hill Climbing
 ///
-///```
-///let solution = metaheuristics::hill_climbing::solve(&mut problem, runtime);
-///```
+///# Parameters
 ///
 /// `problem` is the type that implements the `Metaheuristics` trait.
 ///
 /// `runtime` is a `time::Duration` specifying how long to spend searching for a solution.
+///
+///# Examples
+///
+///```
+///let solution = metaheuristics::hill_climbing::solve(&mut problem, runtime);
+///```
 pub fn solve<T>(problem: &mut Metaheuristics<T>, runtime: Duration) -> T {
     let mut best_candidate = problem.generate_candidate();
     let start_time         = PreciseTime::now();

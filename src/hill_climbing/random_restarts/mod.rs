@@ -24,6 +24,16 @@ use time::{Duration, PreciseTime};
 
 /// Returns an approximate solution to your optimisation problem using Hill Climbing with random restarts
 ///
+///# Parameters
+///
+/// `problem` is the type that implements the `Metaheuristics` trait.
+///
+/// `runtime` is a `time::Duration` specifying how long to spend searching for a solution.
+///
+/// `probability` is a value within the range `[0.0, 1.0)` specifying the restart probability.
+///
+///# Examples
+///
 ///```
 ///let solution = metaheuristics::hill_climbing::random_restarts::solve(
 ///    &mut problem,
@@ -31,12 +41,6 @@ use time::{Duration, PreciseTime};
 ///    probability
 ///);
 ///```
-///
-/// `problem` is the type that implements the `Metaheuristics` trait.
-///
-/// `runtime` is a `time::Duration` specifying how long to spend searching for a solution.
-///
-/// `probability` is a value within the range `[0.0, 1.0)` specifying the restart probability.
 pub fn solve<T>(problem: &mut Metaheuristics<T>, runtime: Duration, probability: f64) -> T {
     let mut best_candidate = problem.generate_candidate();
     let start_time         = PreciseTime::now();
