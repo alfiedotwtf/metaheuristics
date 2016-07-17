@@ -23,7 +23,7 @@
 //! available to you. To see an example implementation, check out the [Travelling Salesman
 //! Problem](https://www.alfie.wtf/rustdoc/travelling_salesman/travelling_salesman/) crate.
 //!
-//!# Example
+//!# Examples
 //!
 //!```
 //! let solution = metaheuristics::hill_climbing::solve(&mut problem, runtime);
