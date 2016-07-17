@@ -12,6 +12,9 @@
 //! on randomness to jump around the search space, then sample where they land for possible
 //! solutions. In simple terms, **metaheuristics are structured trial and error**.
 //!
+//! If you've got a trial and error problem, and individual trials can be compared and ranked
+//! against each other, Metaheuristics may be your most viable option at getting good results.
+//!
 //! For more information, please see the
 //! [Metaheuristics](https://en.wikipedia.org/wiki/Metaheuristic) Wikipedia article, and
 //! [Essentials of
