@@ -42,17 +42,24 @@ use time::{Duration, PreciseTime};
 ///);
 ///```
 pub fn solve<T>(problem: &mut Metaheuristics<T>, runtime: Duration, probability: f64) -> T {
-    let mut best_candidate = problem.generate_candidate();
-    let start_time         = PreciseTime::now();
+    let mut best_candidate    = problem.generate_candidate();
+    let mut current_candidate = problem.clone_candidate(&best_candidate);
+    let start_time            = PreciseTime::now();
 
     while start_time.to(PreciseTime::now()) < runtime {
-        let next_candidate = match probability > thread_rng().gen_range(0.0, 1.0) {
-            true  => problem.generate_candidate(),
-            false => problem.tweak_candidate(&best_candidate),
-        };
+        if probability > thread_rng().gen_range(0.0, 1.0) {
+            current_candidate = problem.generate_candidate();
+            continue;
+        }
 
-        if problem.rank_candidate(&next_candidate) > problem.rank_candidate(&best_candidate) {
-            best_candidate = next_candidate;
+        let next_candidate = problem.tweak_candidate(&current_candidate);
+
+        if problem.rank_candidate(&next_candidate) > problem.rank_candidate(&current_candidate) {
+            current_candidate = problem.clone_candidate(&next_candidate);
+        }
+
+        if problem.rank_candidate(&current_candidate) > problem.rank_candidate(&best_candidate) {
+            best_candidate = problem.clone_candidate(&next_candidate);
         }
     }
 
