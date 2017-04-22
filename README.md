@@ -6,7 +6,7 @@ The aim of this crate is to host various Metaheuristics algorithms. Patches
 implementing useful algorithms most welcome.
 
 The documentation for this crate can be [found
-here](https://www.alfie.wtf/rustdoc/metaheuristics/metaheuristics/).
+here](https://docs.rs/metaheuristics).
 
 ## What are Metaheuristics
 
@@ -28,7 +28,7 @@ Metaheuristics](https://www.amazon.com/Essentials-Metaheuristics-Second-Sean-Luk
 
 By implementing the `Metaheuristics` trait, the algorithms within the following modules will be
 available to you. To see an example implementation, check out the [Travelling Salesman
-Problem](https://www.alfie.wtf/rustdoc/travelling_salesman/travelling_salesman/) crate.
+Problem](https://docs.rs/travelling_salesman) crate.
 
 # Examples
 
@@ -56,7 +56,7 @@ IT COMES WITHOUT WARRANTY OF ANY KIND.
 
 # Copyright and License
 
-Copyright (C) 2015 by Alfie John
+Perpetual Copyright (C) to Alfie John
 
 This program is free software: you can redistribute it and/or modify it under
 the terms of the GNU General Public License as published by the Free Software
