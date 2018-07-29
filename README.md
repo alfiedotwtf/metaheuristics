@@ -38,11 +38,7 @@ Problem](https://docs.rs/travelling_salesman) crate.
 
 Please report any bugs or feature requests at:
 
-* [https://github.com/alfiedotwtf/metaheuristics/issues](https://github.com/alfiedotwtf/metaheuristics/issues)
-
-Watch the repository and keep up with the latest changes:
-
-* [https://github.com/alfiedotwtf/metaheuristics/subscription](https://github.com/alfiedotwtf/metaheuristics/subscription)
+* [https://gitlab.com/alfiedotwtf/metaheuristics/issues](https://gitlab.com/alfiedotwtf/metaheuristics/issues)
 
 Feel free to fork the repository and submit pull requests :)
 

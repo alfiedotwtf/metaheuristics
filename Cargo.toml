@@ -1,12 +1,12 @@
 [package]
 name    = "metaheuristics"
-version = "0.0.13"
+version = "0.0.14"
 authors = ["Alfie John <alfie@alfie.wtf>"]
 
 description   = "Find approximate solutions to your optimisation problem using metaheuristics algorithms"
 documentation = "https://docs.rs/metaheuristics"
 homepage      = "https://crates.io/crates/metaheuristics"
-repository    = "https://github.com/alfiedotwtf/metaheuristics"
+repository    = "https://gitlab.com/alfiedotwtf/metaheuristics"
 
 license = "GPL-3.0"
 
