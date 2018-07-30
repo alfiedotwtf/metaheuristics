@@ -1,6 +1,6 @@
 [package]
 name    = "metaheuristics"
-version = "0.0.14"
+version = "1.0.15"
 authors = ["Alfie John <alfie@alfie.wtf>"]
 
 description   = "Find approximate solutions to your optimisation problem using metaheuristics algorithms"

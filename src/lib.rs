@@ -36,11 +36,7 @@
 //!
 //! Please report any bugs or feature requests at:
 //!
-//! * [https://github.com/alfiedotwtf/metaheuristics/issues](https://github.com/alfiedotwtf/metaheuristics/issues)
-//!
-//! Watch the repository and keep up with the latest changes:
-//!
-//! * [https://github.com/alfiedotwtf/metaheuristics/subscription](https://github.com/alfiedotwtf/metaheuristics/subscription)
+//! * [https://gitlab.com/alfiedotwtf/metaheuristics/issues](https://gitlab.com/alfiedotwtf/metaheuristics/issues)
 //!
 //! Feel free to fork the repository and submit pull requests :)
 //!
@@ -59,7 +55,7 @@
 //! Software Foundation, either version 3 of  the License, or (at your option)
 //! any later version.
 //!
-//!  This program is distributed in the hope that it will be useful, but
+//! This program is distributed in the hope that it will be useful, but
 //! WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY
 //! or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for
 //! more details.
