@@ -3,7 +3,7 @@
 //! When metal is heated to melting point, its atoms are let loose to move freely, and do so in a
 //! random fashion. If cooled too quickly (a process known as quenching), the random positioning of
 //! atoms gets frozen in time, creating a hard and brittle metal. However if allowed to cool at a
-//! slower rate (a process known as annealing), the atoms arrange in a more unform fashion,
+//! slower rate (a process known as annealing), the atoms arrange in a more uniform fashion,
 //! creating a soft and malleable metal. Simulated annealing borrows from this process.
 //!
 //! Here we duplicate the functionality of the `metaheuristics::hill_climbing` module but with
