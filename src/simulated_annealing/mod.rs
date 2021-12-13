@@ -46,7 +46,7 @@
 
 use rand::{thread_rng, Rng};
 use super::Metaheuristics;
-use time::{Duration, PreciseTime};
+use time::{Duration, Instant};
 
 /// Returns an approximate solution to your optimisation problem using Simulated Annealing
 ///
@@ -64,11 +64,11 @@ use time::{Duration, PreciseTime};
 pub fn solve<T>(problem: &mut dyn Metaheuristics<T>, runtime: Duration) -> T {
     let mut best_candidate      = problem.generate_candidate();
     let mut annealing_candidate = problem.tweak_candidate(&best_candidate);
-    let start_time              = PreciseTime::now();
-    let runtime_in_milliseconds = runtime.num_milliseconds() as f64;
+    let start_time              = Instant::now();
+    let runtime_in_milliseconds = runtime.whole_milliseconds() as f64;
 
     loop {
-        let portion_elapsed = (start_time.to(PreciseTime::now()).num_milliseconds() as f64) / runtime_in_milliseconds;
+        let portion_elapsed = (start_time.elapsed().whole_milliseconds() as f64) / runtime_in_milliseconds;
 
         if portion_elapsed >= 1.0 {
             break;
@@ -78,7 +78,7 @@ pub fn solve<T>(problem: &mut dyn Metaheuristics<T>, runtime: Duration) -> T {
         let next_is_better        = problem.rank_candidate(&next_candidate) > problem.rank_candidate(&annealing_candidate);
         let replacement_threshold = 1.0f64.exp().powf(-10.0 * portion_elapsed.powf(3.0));
 
-        if next_is_better || (thread_rng().gen_range(0.0, 1.0) < replacement_threshold) {
+        if next_is_better || (thread_rng().gen_range(0.0..1.0) < replacement_threshold) {
             annealing_candidate = next_candidate;
         }
 

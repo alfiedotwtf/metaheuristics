@@ -20,7 +20,7 @@
 
 use rand::{thread_rng, Rng};
 use super::super::Metaheuristics;
-use time::{Duration, PreciseTime};
+use time::{Duration, Instant};
 
 /// Returns an approximate solution to your optimisation problem using Hill Climbing with random restarts
 ///
@@ -44,10 +44,10 @@ use time::{Duration, PreciseTime};
 pub fn solve<T>(problem: &mut dyn Metaheuristics<T>, runtime: Duration, probability: f64) -> T {
     let mut best_candidate    = problem.generate_candidate();
     let mut current_candidate = problem.clone_candidate(&best_candidate);
-    let start_time            = PreciseTime::now();
+    let start_time            = Instant::now();
 
-    while start_time.to(PreciseTime::now()) < runtime {
-        if probability > thread_rng().gen_range(0.0, 1.0) {
+    while start_time.elapsed() < runtime {
+        if probability > thread_rng().gen_range(0.0..1.0) {
             current_candidate = problem.generate_candidate();
             continue;
         }
