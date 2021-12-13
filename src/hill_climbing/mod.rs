@@ -14,7 +14,7 @@
 //!
 //!# Examples
 //!
-//!```
+//!```ignore
 //!let solution = metaheuristics::hill_climbing::solve(&mut problem, runtime);
 //!```
 
@@ -33,10 +33,10 @@ use time::{Duration, PreciseTime};
 ///
 ///# Examples
 ///
-///```
+///```ignore
 ///let solution = metaheuristics::hill_climbing::solve(&mut problem, runtime);
 ///```
-pub fn solve<T>(problem: &mut Metaheuristics<T>, runtime: Duration) -> T {
+pub fn solve<T>(problem: &mut dyn Metaheuristics<T>, runtime: Duration) -> T {
     let mut best_candidate = problem.generate_candidate();
     let start_time         = PreciseTime::now();
 

@@ -13,7 +13,7 @@
 //! has run out.
 //!
 //! The probability of going downhill, or cooling temperature, is given by the following function:
-//!
+//!ignore
 //!    P(t) = e^(-10*(t^3))
 //!
 //! and can be seen by the following gnuplot:
@@ -40,7 +40,7 @@
 //!
 //!# Examples
 //!
-//!```
+//!```ignore
 //!let solution = metaheuristics::simulated_annealing::solve(&mut problem, runtime);
 //!```
 
@@ -58,10 +58,10 @@ use time::{Duration, PreciseTime};
 ///
 ///# Examples
 ///
-///```
+///```ignore
 ///let solution = metaheuristics::simulated_annealing::solve(&mut problem, runtime);
 ///```
-pub fn solve<T>(problem: &mut Metaheuristics<T>, runtime: Duration) -> T {
+pub fn solve<T>(problem: &mut dyn Metaheuristics<T>, runtime: Duration) -> T {
     let mut best_candidate      = problem.generate_candidate();
     let mut annealing_candidate = problem.tweak_candidate(&best_candidate);
     let start_time              = PreciseTime::now();

@@ -28,7 +28,7 @@
 //!
 //!# Examples
 //!
-//!```
+//!```ignore
 //! let solution = metaheuristics::hill_climbing::solve(&mut problem, runtime);
 //!```
 //!
@@ -74,21 +74,21 @@ pub mod simulated_annealing;
 pub trait Metaheuristics<T> {
     /// Clone the supplied candidate solution
     ///
-    ///```
+    ///```ignore
     /// let new_candidate = problem.clone_candidate(&old_candidate);
     ///```
     fn clone_candidate(&mut self, candidate: &T) -> T;
 
     /// Randomly generate a new candidate solution
     ///
-    ///```
+    ///```ignore
     /// let candidate = problem.generate_candidate();
     ///```
     fn generate_candidate(&mut self) -> T;
 
     /// Rank a candidate solution so that it can be compared with another (higher is better)
     ///
-    ///```
+    ///```ignore
     /// if problem.rank_candidate(&new_candidate) > problem.rank_candidate(&old_candidate) {
     ///     ...
     /// }
@@ -97,7 +97,7 @@ pub trait Metaheuristics<T> {
 
     /// Clone the supplied candidate solution, then make a small (but random) modification
     ///
-    ///```
+    ///```ignore
     /// let new_candidate = problem.tweak_candidate(&old_candidate);
     ///```
     fn tweak_candidate(&mut self, candidate: &T) -> T;
