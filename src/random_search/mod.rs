@@ -7,12 +7,12 @@
 //!
 //!# Examples
 //!
-//!```
+//!```ignore
 //!let solution = metaheuristics::random_search::solve(&mut problem, runtime);
 //!```
 
 use super::Metaheuristics;
-use time::{Duration, PreciseTime};
+use time::{Duration, Instant};
 
 /// Returns an approximate solution to your optimisation problem using Random Search
 ///
@@ -24,14 +24,14 @@ use time::{Duration, PreciseTime};
 ///
 ///# Examples
 ///
-///```
+///```ignore
 ///let solution = metaheuristics::random_search::solve(&mut problem, runtime);
 ///```
-pub fn solve<T>(problem: &mut Metaheuristics<T>, runtime: Duration) -> T {
+pub fn solve<T>(problem: &mut dyn Metaheuristics<T>, runtime: Duration) -> T {
     let mut best_candidate = problem.generate_candidate();
-    let start_time         = PreciseTime::now();
+    let start_time         = Instant::now();
 
-    while start_time.to(PreciseTime::now()) < runtime {
+    while start_time.elapsed() < runtime {
         let next_candidate = problem.generate_candidate();
 
         if problem.rank_candidate(&next_candidate) > problem.rank_candidate(&best_candidate) {
