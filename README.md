@@ -38,7 +38,7 @@ Problem](https://docs.rs/travelling_salesman) crate.
 
 Please report any bugs or feature requests at:
 
-* [https://gitlab.com/alfiedotwtf/metaheuristics/issues](https://gitlab.com/alfiedotwtf/metaheuristics/issues)
+* [https://github.com/alfiedotwtf/metaheuristics/issues](https://github.com/alfiedotwtf/metaheuristics/issues)
 
 Feel free to fork the repository and submit pull requests :)
 
@@ -52,7 +52,7 @@ IT COMES WITHOUT WARRANTY OF ANY KIND.
 
 # Copyright and License
 
-Perpetual Copyright (C) to Alfie John
+Copyright (C) 2021 to Alfie John
 
 This program is free software: you can redistribute it and/or modify it under
 the terms of the GNU General Public License as published by the Free Software
