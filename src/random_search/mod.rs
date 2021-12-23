@@ -29,7 +29,7 @@ use time::{Duration, Instant};
 ///```
 pub fn solve<T>(problem: &mut dyn Metaheuristics<T>, runtime: Duration) -> T {
     let mut best_candidate = problem.generate_candidate();
-    let start_time         = Instant::now();
+    let start_time = Instant::now();
 
     while start_time.elapsed() < runtime {
         let next_candidate = problem.generate_candidate();

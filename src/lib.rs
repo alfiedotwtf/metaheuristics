@@ -93,7 +93,7 @@ pub trait Metaheuristics<T> {
     ///     ...
     /// }
     ///```
-    fn rank_candidate(&mut self, candidate: &T)  -> f64;
+    fn rank_candidate(&mut self, candidate: &T) -> f64;
 
     /// Clone the supplied candidate solution, then make a small (but random) modification
     ///
