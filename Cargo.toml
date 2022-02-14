@@ -11,5 +11,5 @@ repository    = "https://github.com/alfiedotwtf/metaheuristics"
 license = "GPL-3.0"
 
 [dependencies]
-rand = "=0.8.4"
-time = "=0.3.5"
+rand = "^0.8.4"
+time = "^0.3.5"
